@@ -13,9 +13,6 @@
 Gemfile.lock
 spin-local.yaml
 
-bin
-work
-state
 build
 dist
 _work
