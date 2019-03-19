@@ -20,5 +20,6 @@ build
 dist
 _work
 _src
+_state
 *-local.yaml
 stack.tfvars

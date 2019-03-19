@@ -28,13 +28,13 @@ bootstrap_init:
 
 bootstrap_plan: bootstrap_init
 	cd _src && terraform plan \
-		-state ../state/terraform.tfstate \
+		-state ../_state/terraform.tfstate \
 		-var-file=../stack.tfvars
 
 bootstrap_apply: bootstrap_init
 	cd _src && terraform apply \
 		-auto-approve \
-		-state ../state/terraform.tfstate \
+		-state ../_state/terraform.tfstate \
 		-var-file=../stack.tfvars
 
 _src/remote_backend.tf:
