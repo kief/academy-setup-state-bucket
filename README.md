@@ -13,4 +13,4 @@ Edit the `stack.tfvars` file. Edit the `Makefile` and set things at the top.
 
 Run `make bootstrap_plan`, and when you're happy with that, `make bootstrap_apply`. This should make the s3 bucket. It will download the terraform source from a [cloudspin project](https://github.com/cloudspinners/spin-stack-s3bucket). The state will be stored locally in the first instance.
 
-Once that's working, you can run `make init`, which should migrate the state to the bucket that you created in the previous steps.
+Once that's working, you can run `make plan`, which should migrate the state to the bucket that you created in the previous steps, then run `make apply` to make sure everything is cool.
