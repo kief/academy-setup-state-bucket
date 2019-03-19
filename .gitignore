@@ -21,3 +21,4 @@ dist
 _work
 _src
 *-local.yaml
+stack.tfvars
