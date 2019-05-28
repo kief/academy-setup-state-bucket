@@ -49,7 +49,6 @@ bootstrap_plan: bootstrap_init
 		-var-file=../my-stack.tfvars \
 		-var region=$(aws_region) \
 		-var bucket_base_name=$(BUCKET_BASENAME) \
-		-var managed_stack_name=$(MANAGED_STACK_NAME) \
 		-var instance_identifier=$(INSTANCE_IDENTIFIER)
 
 bootstrap_apply: bootstrap_init
@@ -59,7 +58,6 @@ bootstrap_apply: bootstrap_init
 		-var-file=../my-stack.tfvars \
 		-var region=$(aws_region) \
 		-var bucket_base_name=$(BUCKET_BASENAME) \
-		-var managed_stack_name=$(MANAGED_STACK_NAME) \
 		-var instance_identifier=$(INSTANCE_IDENTIFIER)
 
 _src/remote_backend.tf:
@@ -87,7 +85,6 @@ plan: init ## Terraform plan
 		-var-file=../my-stack.tfvars \
 		-var region=$(aws_region) \
 		-var bucket_base_name=$(BUCKET_BASENAME) \
-		-var managed_stack_name=$(MANAGED_STACK_NAME) \
 		-var instance_identifier=$(INSTANCE_IDENTIFIER) \
 		-var environment_name=$(environment_name)
 
@@ -97,7 +94,6 @@ apply: init ## Terraform apply
 		-var-file=../my-stack.tfvars \
 		-var region=$(aws_region) \
 		-var bucket_base_name=$(BUCKET_BASENAME) \
-		-var managed_stack_name=$(MANAGED_STACK_NAME) \
 		-var instance_identifier=$(INSTANCE_IDENTIFIER) \
 		-var environment_name=$(environment_name)
 
